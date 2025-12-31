@@ -22,3 +22,4 @@ This is a Machine Learning project that predicts an employee's salary based on t
 * **Key Insight:** There is a clear linear relationship between years of experience and salary.
 
 ## 👤 Author
+Created by Pulak Mohanty as part of my first AIML project at 3skill.
