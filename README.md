@@ -6,7 +6,11 @@ This is a Machine Learning project that predicts an employee's salary based on t
 ## 📂 Project Structure
 * `data/` → Contains the dataset (`salary_data.csv`).
 * `models/` → Contains the saved model file (`salary_model.pkl`) for future use.
-* `src/` → Contains the Jupyter Notebook with the code.
+* `src/` → Contains the source code:
+  * `generate_data.py`: Script to generate the synthetic dataset.
+  * `main.py`: The main script to train the model, evaluate it, and save the .pkl file.
+  * `predict.py`: A separate script to load the saved model and predict salary for any new input value.
+* `salary_graph.png` → A generated graph visualizing the linear regression line.           
 * `README.md` → This file.
 
 ## 🛠️ Tools Used
@@ -18,7 +22,7 @@ This is a Machine Learning project that predicts an employee's salary based on t
 
 ## 📊 Results
 * **Algorithm Used:** Linear Regression.
-* **Accuracy:** The model achieved approximately **% accuracy** on the test data.
+* **Accuracy:** The model achieved approximately **98% accuracy** on the test data.
 * **Key Insight:** There is a clear linear relationship between years of experience and salary.
 
 ## 👤 Author
