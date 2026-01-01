@@ -8,30 +8,30 @@ from sklearn.metrics import r2_score
 def main():
     # 1. Loading dataset
     
-    print("📂 Loading dataset...")
+    print("Loading dataset...")
     
     if not os.path.exists('data/salary_data.csv'):
         print("❌ Error: 'data/salary_data.csv' not found.")
         return
 
     df = pd.read_csv('data/salary_data.csv')
-    print("✅ Dataset loaded successfully.")
+    print("Dataset loaded successfully.")
 
     # 2. Splitting dataset
 
     train_dataset = df.sample(frac=0.8, random_state=42).copy()
     test_dataset = df.drop(train_dataset.index).copy()
-    print("✅ Dataset split into training and testing sets.")
+    print("Dataset split into training and testing sets.")
 
     # 3. Training model
     
     reg = LinearRegression()
     predictors = ['YearsExperience']
     target = 'Salary'
-    print("🧠 Training model...")
+    print("Training model...")
 
     reg.fit(train_dataset[predictors], train_dataset[target])
-    print("✅ Model trained successfully.")
+    print("Model trained successfully.")
 
     # 4. Evaluating model
 
@@ -58,13 +58,13 @@ def main():
     
     # 5_5. Saving graph
     plt.savefig('salary_graph.png')
-    print("✅ Graph saved as 'salary_graph.png'")
+    print("Graph saved as 'salary_graph.png'")
 
     # 6. Saving model
 
     os.makedirs('models', exist_ok=True)
     joblib.dump(reg, 'models/salary_model.pkl')
-    print("✅ Model saved to 'models/salary_model.pkl'")
+    print("Model saved to 'models/salary_model.pkl'")
 
 if __name__ == "__main__":
     main()
